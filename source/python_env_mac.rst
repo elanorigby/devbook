@@ -18,15 +18,15 @@ Install Homebrew so you don’t hate your life
 
 open your terminal, paste this in
 ::
-    $ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
-
+    $ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+..
     reference - http://brew.sh/
 
 
 if permissions need fixing
 ::
     $ sudo chown -R "$USER":admin /usr/local # or whatever the dir in question is
-
+..
     reference - https://github.com/Homebrew/brew/blob/master/docs/FAQ.md
 
 
@@ -42,9 +42,9 @@ This can be done by running::
 
     $ echo 'eval "$(pyenv init -)"' >> ~/.bash_profile
 
-resart your shell
+refresh
 ::
-    $ exec $SHELL
+    $ source ~/.bash_profile
 
 install the python version(s) you want. 
 ::
@@ -59,6 +59,7 @@ set global(default) version of python
 
 you can see all available versions with ``pyenv install --list``.
 
+References:
     https://github.com/pyenv/pyenv/blob/master/README.md
 
     https://stackoverflow.com/questions/29950300/what-is-the-relationship-between-virtualenv-and-pyenv
