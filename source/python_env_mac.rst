@@ -30,7 +30,7 @@ if permissions need fixing
     reference - https://github.com/Homebrew/brew/blob/master/docs/FAQ.md
 
 
-Install pyenv with Homebrew to manage your Python versions
+Install pyenv to keep your pythons under control
 ----------------------------------------------------------------------
 ::
 
