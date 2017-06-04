@@ -13,8 +13,8 @@ This is a place to keep and update all that stuff that in \~the future\~ I'm goi
    :caption: Innards:
 
    python_env_mac
-   venv/virtualenv-install
    venv/virtualenv-tips
+   pip/dev_packages.rst
 
 
 
