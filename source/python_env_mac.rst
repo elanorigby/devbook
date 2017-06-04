@@ -48,7 +48,8 @@ refresh
 
 install the python version(s) you want. 
 ::
-
+    
+    $ pyenv install 2.7.13
     $ pyenv install 3.5.3
     $ pyenv install 3.6.1
 
@@ -85,17 +86,45 @@ upgrade it
 
 Install Virtualenv and Virtualenvwrapper so you can achieve a semblance of organization
 ---------------------------------------------------------------------------------------
+::
 
-This can be done in a fell swoop with
+    pip install virtualenv
+
+..
+
+    reference - http://docs.python-guide.org/en/latest/dev/virtualenvs/
 ::
     
-    $ pip install virtualenv-burrito
+    pip install virtualenvwrapper
 
-now a moment of gratitude to the person who created virtualenv-burrito
-and saved you 15 minutes of figuring out exactly what to add to your
-bash profile - https://github.com/brainsik/virtualenv-burrito
+..
 
-check that it worked by running
+    reference - https://virtualenvwrapper.readthedocs.io/en/latest/install.html
+
+add (some permutation of) this to your bash profile::
+
+    # add usr/local to path -- you might not need to do this
+    # you can check your $PATH with echo $PATH
+    export PATH=/usr/local:$PATH
+
+    # set default python for new virtualenvs
+    export VIRTUALENVWRAPPER_PYTHON=""
+    # (will set it to "$(command \\which python)")
+    
+    # set directory your virtualenvs will go in
+    export WORKON_HOME=$HOME/.virtualenvs 
+
+    # set directory you keep your projects in
+    export PROJECT_HOME=$HOME/code  
+
+    source /usr/local/bin/virtualenvwrapper.sh
+
+
+then restart the bash profile by running
+::
+    $ source ~/.bash_profile
+
+check that it worked with
 ::
 
     $ workon
