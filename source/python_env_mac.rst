@@ -66,7 +66,7 @@ References:
     https://stackoverflow.com/questions/29950300/what-is-the-relationship-between-virtualenv-and-pyenv
 
 Use Pip so Python doesn’t squeeze you to death
-.................................................
+-----------------------------------------------
 
     https://pip.pypa.io/en/stable/
 
