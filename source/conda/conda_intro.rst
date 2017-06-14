@@ -1,25 +1,30 @@
 Should I use Conda instead?
 ===========================
 
-I am trialling using Conda (via Miniconda) to have one tool that 
+I am checking out Conda to have one tool that 
 
 1. manages python versions (instead of pyenv)
 2. creates virtual environments (instead of vitualenv)
 
-I think I am going to use pip as usual within a conda env, rather than some mix of conda and pip as package managers.
-This is for simplicity, and also so that I can continue to use my true dev loves, pipdeptree and pip-tools. 
+I'm using Miniconda because I do not need the vast array of mathy/sciency tools that Anaconda automatically installs for you. 
 
-tl:dr I am going to use conda to replace pyenv and virtualenv, but not pip.
+I am going to use conda to replace pyenv and virtualenv, but continue to use pip for all my package installs. This is for simplicity, and also so that I can continue to use my true dev loves, pipdeptree and pip-tools. 
 
 
-Step 1: Install Miniconda 
+
+Install Miniconda 
 -------------------------
 https://conda.io/docs/install/quick.html
 
-Step 2: Take the tour
+Take the tour
 ----------------------
 https://conda.io/docs/test-drive.html
 
+Hook it up to your text editor or IDE
+-------------------------------------
+
+	Sublime Text
+		https://stackoverflow.com/questions/34865717/use-conda-environment-in-sublime-text-3
 
 More Infos
 ++++++++++
