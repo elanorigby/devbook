@@ -38,6 +38,7 @@ To bind an existing project directory to a virtualenv, use ``setvirtualenvprojec
 ::
 	cd <directory_of_project>
 	setvirtualenvproject <virtualenv_path project_path>
+
 ..
 
 	http://virtualenvwrapper.readthedocs.io/en/latest/projects.html
@@ -47,6 +48,7 @@ Templates
 Automatically create a new project/virtualenv from an existing template
 ::
 	mkproject -t <template_name> <venv_name>
+	
 ..
 	
 	https://virtualenvwrapper.readthedocs.io/en/latest/projects.html#using-templates
