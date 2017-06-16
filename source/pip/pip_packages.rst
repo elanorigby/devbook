@@ -1,10 +1,11 @@
 Some useful pip packages for development
 ========================================
 
-pipdeptree
-----------
-a more informative version of ``pip list`` - 
-it shows not only packages installed, but what package installed that package and package requirements and versions
+.. _pipdeptree-ref: 
+
+pipdeptree: a much more helpful pip list
+-----------------------------------------
+Shows not only packages installed, but what package installed that package and package requirements and versions
 
 example::
 
@@ -12,7 +13,7 @@ example::
   		- click [required: >=2.0, installed: 6.7]
   		- itsdangerous [required: >=0.21, installed: 0.24]
   		- Jinja2 [required: >=2.4, installed: 2.9.5]
-    	- MarkupSafe [required: >=0.23, installed: 1.0]
+      - MarkupSafe [required: >=0.23, installed: 1.0]
   		- Werkzeug [required: >=0.7, installed: 0.12]
 	pip-tools==1.9.0
   		- click [required: >=6, installed: 6.7]
@@ -29,11 +30,4 @@ to use::
 	
 	$ pipdeptree
 
-OR do yourself a favor and alias it::
-
-	$ alias pdt="pipdeptree"
-	$ pdt
-
-
-https://www.digitalocean.com/community/tutorials/an-introduction-to-useful-bash-aliases-and-functions
-
+OR do yourself a favor and :doc:`alias <../bash/bash_aliasing>` it.
