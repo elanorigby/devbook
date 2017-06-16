@@ -45,6 +45,7 @@ Install Virtualenv and Virtualenvwrapper so you can achieve a semblance of organ
 ..
 
     reference - http://docs.python-guide.org/en/latest/dev/virtualenvs/
+    
 ::
     
     pip install virtualenvwrapper
