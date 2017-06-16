@@ -13,12 +13,15 @@ open the appstore and search for xcode. install it.
 
 install extra components / agree to stuff
 
+
 Install Homebrew so you don’t hate your life
 --------------------------------------------
+Homebrew is a package manager for OSX. You want your packages to be managed.
 
 open your terminal, paste this in
 ::
     $ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
 ..
     reference - http://brew.sh/
 
@@ -26,165 +29,133 @@ open your terminal, paste this in
 if permissions need fixing
 ::
     $ sudo chown -R "$USER":admin /usr/local # or whatever the dir in question is
+
 ..
     reference - https://github.com/Homebrew/brew/blob/master/docs/FAQ.md
 
 
-Install pyenv with Homebrew to manage your Python versions
-----------------------------------------------------------------------
+Use Conda to maintain order among the sneks
+-------------------------------------------
+Conda is a package manager and also allows you to create environments that keep the packages you need for a project all neatly bundled together along with the version of Python that that project uses. Very nice.
+
+There are two ways to get conda: through Anaconda or through Miniconda. Anaconda automatically includes a fat passel of science/maths/data packages, and if you need those you probably already know about it. Miniconda does not automatically include all that stuff so that's what I use.
+
+Download Miniconda for your OS
+    https://conda.io/docs/install/quick.html
+
+Consider taking the whole `Conda Test Drive <https://conda.io/docs/test-drive.html>`_ but here's the basics:
+
+to check that installation worked
 ::
 
-    $ brew install pyenv
+    $ conda --version
 
-add ``eval "$(pyenv init -)"`` to your bash_profile.
-
-This can be done by running::
-
-    $ echo 'eval "$(pyenv init -)"' >> ~/.bash_profile
-
-refresh
-::
-    $ source ~/.bash_profile
-
-install the python version(s) you want. 
-::
-    
-    $ pyenv install 2.7.13
-    $ pyenv install 3.5.3
-    $ pyenv install 3.6.1
-
-set global(default) version of python
+to create a conda environment
 ::
 
-    $ pyenv global 3.5.3
+    $ conda create --name <env_name> <packages>
+    # ex:
+    $ conda create --name testenv pip
 
-you can see all available versions with ``pyenv install --list``.
+to specify which python
+::
+    $ conda create --name testenv python=3.5 pip
 
-References:
-    https://github.com/pyenv/pyenv/blob/master/README.md
 
-    https://stackoverflow.com/questions/29950300/what-is-the-relationship-between-virtualenv-and-pyenv
+you can use ``-n`` instead of ``--name`` if you're into that kind of thing.
+
+I use conda as an environment manager, not as a package manager, so the only package I install with conda when I create an environment is pip. Then I install the packages I want within the environment usig pip.
+
+see a list of your environments
+::  
+    $ conda info --envs
+
+you can use ``-e`` instead of ``--envs`` if you're into that kind of thing.
+
+to list all conda packages in an environment
+::
+    conda list
+
+activate an environment
+:: 
+    $ source activate <env_name>
+
+deactivate an environment
+::
+    $ source deactivate
+
+*protip* ~ if 'source activate' and 'source deactivate' seem long to type, :doc:`alias </bash/bash_aliasing>` them.
+
+to delete an environment
+::
+    conda remove --name flowers --all
+
+The ``--all`` means all packages and you have to include it
+
+
+
 
 Use Pip so Python doesn’t squeeze you to death
 -----------------------------------------------
-
-    https://pip.pypa.io/en/stable/
-
-check to see if you already have it (you almost certainly do):
+When you create a conda environment include pip.
 ::
+    $ conda create --name newenv pip
 
-    $ pip --version
+Inside the environment you can then use pip to install and manage any python packages you need.
 
-if not installed, follow directions in docs -
-https://pip.pypa.io/en/stable/installing/#installing-with-get-pip-py
-
-upgrade it
+to see a list of the packages you have installed
 ::
+    $ pip list
 
-    $ pip install --upgrade pip
+**OR** be a cool guy and use :ref:`pipdeptree <pipdeptree-ref>`
 
-
-Install Virtualenv and Virtualenvwrapper so you can achieve a semblance of organization
----------------------------------------------------------------------------------------
+to install a package
 ::
+    $ pip install <package_name>
 
-    pip install virtualenv
-
-..
-
-    reference - http://docs.python-guide.org/en/latest/dev/virtualenvs/
+to install a specific version of a package
 ::
-    
-    pip install virtualenvwrapper
+    $ pip install Flask==0.10.1
 
-..
-
-    reference - https://virtualenvwrapper.readthedocs.io/en/latest/install.html
-
-add (some permutation of) this to your bash profile::
-
-    # add usr/local to path -- you might not need to do this
-    # you can check your $PATH with echo $PATH
-    export PATH=/usr/local:$PATH
-
-    # set default python for new virtualenvs
-    export VIRTUALENVWRAPPER_PYTHON=""
-    # (will set it to "$(command \\which python)")
-    
-    # set directory your virtualenvs will go in
-    export WORKON_HOME=$HOME/.virtualenvs 
-
-    # set directory you keep your projects in
-    export PROJECT_HOME=$HOME/code  
-
-    source /usr/local/bin/virtualenvwrapper.sh
-
-
-then restart the bash profile by running
+to update a package
 ::
-    $ source ~/.bash_profile
-
-check that it worked with
-::
-
-    $ workon
-
-if that doesn’t error you, make a test virtualenv
-::
-
-    $ mkvirtualenv testvenv
-
-run ``workon`` again to see list of virtualenvs. (It should just have
-``testvenv`` in it)
-
-to turn on the virtualenv, run
-::
-    
-    $ workon testvenv
-
-turn off the virtualenv with
-::
-
-    $ deactivate
+    $ pip install --upgrade <package_name>
 
 
-**Adjust virtualenvwrapper slightly to work with pyenv**
+to uninstall a package
+:: 
+    $ pip uninstall <package_name>
 
-change the VIRTUALENVWRAPPER_PYTHON in your bash_profile to "", if it's not that already
-::
-    
-    $ export VIRTUALENVWRAPPER_PYTHON=""
-
-This sets the default python for new virtualenvs to the output of the ``which python`` command. This means that we can change the pyenv global python::
-
-    $ pyenv global 3.6.1
-
-before creating a new environment with ``mkvirtualenv`` and the new environment will use the python version that was global when it was created
-
-example/demonstration/proof::
-    
-    $ pyenv global 3.6.1
-    $ python -V 
-    >> Python 3.6.1
-    $ mkvirtualenv threesixone
-    $ deactivate
-    $ pyenv global 3.5.3
-    $ python -V 
-    >> Python 3.5.3
-    $ workon threesixone
-    $ python -V 
-    >> Python 3.6.1
-
-
-
-*disclaimer:* this is not, as far as I am aware, an officially condoned way of cobining pyenv and virtualenv/wrapper. But I like it and so far it has been good to me.
-
-`pyenv-virtualenv <https://github.com/pyenv/pyenv-virtualenv>`_ and `pyenv-virtualenvwrapper <https://github.com/pyenv/pyenv-virtualenvwrapper>`_ are things that you can check out for a more official version of how these should work together.
+You'll need :doc:`pip/pip_commands` to survive.
 
 
 Use Git so that you don’t lose your mind / get murdered by your co-workers
---------------------------------------------------------------------------
-
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 There are a lot of very nice resources for learning git. Here's one to get you started: https://www.atlassian.com/git
+
+
+Your workflow will look something like this
+---------------------------------------------
+the first time you start a new project
+::
+    $ conda create -n baller_project pip
+
+that and every time after
+::
+    $ source activate baller_project
+    (baller_project)$ pip install <any packages needed>
+    # work on project, committing diligently with git
+    (baller_project)$ source deactivate
+
+
+
+True, we haven't talked about how to get your environment recognized by your project, but that varies pretty widely depending on what IDE or text editor you're using. I'll get into some at some point.
+
+
+
+
+
+
+
 
 
