@@ -11,6 +11,11 @@ Creating an annotated tag in Git is simple. The easiest way is to specify -a whe
 
 The -m specifies a tagging message, which is stored with the tag. If you don’t specify a message for an annotated tag, Git launches your editor so you can type it in.
 
+To view annotated tag deets
+::
+	$ git show v1.4
+
+
 Lightweight Tags
 -----------------
 
