@@ -16,7 +16,7 @@ Lightweight Tags
 
 Another way to tag commits is with a lightweight tag. This is basically the commit checksum stored in a file – no other information is kept. To create a lightweight tag, don’t supply the -a, -s, or -m option::
 
-	$ git tag v1.4-lw
+	$ git tag v1.4
 
 
 List Tags
