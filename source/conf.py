@@ -49,8 +49,8 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'notebook'
-copyright = '2017, qchan'
-author = 'qchan'
+copyright = '2017, sharlak'
+author = 'sharlak'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -90,8 +90,12 @@ html_theme = 'alabaster'
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
-#
-# html_theme_options = {}
+
+html_theme_options = {
+    'logo': 'devbooklogo.png',
+    'github_user': 'elanorigby',
+    'github_repo': 'devbook',
+}
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
@@ -130,7 +134,7 @@ latex_elements = {
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
     (master_doc, 'notebook.tex', 'notebook Documentation',
-     'qchan', 'manual'),
+     'sharlak', 'manual'),
 ]
 
 

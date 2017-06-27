@@ -3,9 +3,6 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-sharlak's devbook
-====================================
-
 This is a place to keep and update all that stuff that in \~the future\~ I'm going to need to do and be like "I spent so long figuring that junk out and looking stuff up and now I have to do it all over again I wish I had written it down"
 
 .. toctree::
