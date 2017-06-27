@@ -1,0 +1,27 @@
+A few differences to wrap your brain around as you move from virtualenvwrapper to pipenv and why you should consider doing so:
+======================================================================================================================================
+
+- When using virtualenvwrapper one can call ``workon venv_name`` from anywhere and that virtualenv will be activated.
+- With pipenv your virtual environments do not have names. You must be in the same directory as a pipfile and then run ``pipenv shell`` to activate the environment that the pipfile describes.
+
+Why I prefer pipenv - it is more explicit. The above is an example of this. Naming a virtualenv gives our squishy human minds a nice handle to hold but obfuscates what the program is actually doing; finding a list of specifications and starting a virtual environment that fits them. The name makes it feel like that venv is a thing that exists permanently in digital space, an object that we pick off a shelf of its fellows when we need it. There is no harm in this analogy, but it's not particularly accurate. In the pipenv way of things it is the specification list, the pipfile, that is the permanent object that one chooses, and then a virtual environment is stamped out according to those specs. This is actually what virtualenvwrapper does, too, it just doesn't feel that way. Providing a name tells virtualenvwrapper where to go find the list, that's all. Pipenv makes you get your butt into the correct place yourself. Which may seem like making you do work but it's actually good because
+
+- There's none of this bother with setting your project home / project directory. Where the pipfile resides, there be the project directory. (Pipenv does honor your ``WORKON_HOME``, however.)
+
+So far pipenv is doing what virtualenvwrapper wrapper does for virtualenv, just in a different way. It saves the specifications for a virtualenv, and then gives you an easy way to manage a virtualenv with those specs. So far so-so, but now we get to talk about the tasty magic\* that is Pipfile.
+
+If requirements.txt is a steep hill, pipfile is the Grand f\*ing Tetons
+--------------------------------------------------------------------------
+
+Virtualenvwrapper never really had a chance here because it came of age before pipfile was even a thing.
+
+Does this look familiar: 
+1. add some packages to your venv
+2. forget to pip freeze them into your requirements.txt
+3. regret
+
+How about this:
+1. add some packages to your venv
+
+
+\* pardon my French

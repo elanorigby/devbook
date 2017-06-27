@@ -1,0 +1,16 @@
+
+---issue
+How can I access my aliases from inside the pipenv shell?
+
+When I'm in an active shell I do not seem to have access to the sweet, sweet aliases that I defined in my bash_profile. Is there a way to set default aliases for pipenv shells, or get them to use the ones in my ?
+
+--- pipenv ramblings
+Why I prefer pipenv - it is more explicit. The above is an example of this. Naming a virtualenv gives our squishy human minds a nice handle to hold but obfuscates what the program is actually doing; finding a list of specifications and starting a virtual environment that fits them. The name makes it feel like that venv is a thing that exists permanently in digital space, an object that we pick off a shelf of its fellows when we need it. There is no harm in this analogy, but it's not particularly accurate. In the pipenv way of things it is the specification list - the pipfile - that is the permanent object that one chooses, and then a virtual environment is stamped out according to those specs. This is actually what virtualenvwrapper does, too, it just doesn't feel that way. Providing a name tells virtualenvwrapper where to go find the list, that's all. Pipenv makes you get your butt into the correct place yourself. Which may seem like making you do work but it's actually good because There's none of this bother with setting your project home / project directory.
+
+
+So far pipenv is doing what virtualenvwrapper wrapper does for virtualenv, just in a different way. It saves the specifications for a virtualenv, and then gives you an easy way to manage a virtualenv with those specs. So far so-so, but now we get to talk about the tasty magic\* that is Pipfile.
+
+
+\* pardon my French
+
+
