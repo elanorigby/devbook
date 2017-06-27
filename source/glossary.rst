@@ -1,5 +1,5 @@
-appendix.rst
-
+Glossary
+=========
 
 .. _directory_ref:
 
