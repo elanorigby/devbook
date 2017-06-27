@@ -2,6 +2,7 @@ Sphinx Reference stuff
 =======================
 
 build the build
+-----------------
 ::	
 	$ sphinx-build -b html source build
 
@@ -14,6 +15,12 @@ make the html
 view the html in ur browzr
 
 unless you add new directories (and files?) you can just keep running make html to update
+
+
+link to a doc (sphinx only)
+---------------------------
+:: 
+	``:doc:`pip/pip_commands```
 
 
 
