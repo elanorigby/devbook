@@ -48,7 +48,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = 'notebook'
+project = "sharlak's devbook"
 copyright = '2017, sharlak'
 author = 'sharlak'
 
@@ -92,10 +92,12 @@ html_theme = 'alabaster'
 # documentation.
 
 html_theme_options = {
-    'logo': 'devbooklogo.png',
     'github_user': 'elanorigby',
     'github_repo': 'devbook',
 }
+
+html_logo = 'devbooklogo.png'
+
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,

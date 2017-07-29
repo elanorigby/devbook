@@ -42,4 +42,4 @@ to uninstall a package
 :: 
     $ pip uninstall <package_name>
 
-You'll need :doc:`pip/pip_commands` to survive.
+You'll need :doc:`pip_commands` to survive.

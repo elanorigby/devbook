@@ -17,7 +17,4 @@ Inline code aka literal interpretation
 
 	``$ alias snek="python"``
 
-link to a doc (sphinx only)
----------------------------
-:: 
-	``:doc:`pip/pip_commands```
+

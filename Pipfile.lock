@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "f5d478c275974c6bdc7991f7b1b784a782c61e0b2a368ebad633f588e8ca44fc"
+            "sha256": "0a81f117427610113fe262c00bc4fe24b49cbbf644e4deaed3879472891b58d1"
         },
         "requires": {},
         "sources": [
@@ -26,6 +26,9 @@
         },
         "docutils": {
             "version": "==0.13.1"
+        },
+        "ez-setup": {
+            "version": "==0.9"
         },
         "idna": {
             "version": "==2.5"
@@ -55,7 +58,7 @@
             "version": "==2.17.3"
         },
         "setuptools": {
-            "version": "==36.0.1"
+            "version": "==36.2.0"
         },
         "six": {
             "version": "==1.10.0"

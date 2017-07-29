@@ -1,5 +1,5 @@
 Use Conda to maintain order among the sneks
--------------------------------------------
+=============================================
 Conda is a package manager and also allows you to create environments that keep the packages you need for a project all neatly bundled together along with the version of Python that that project uses. Very nice.
 
 There are two ways to get conda: through Anaconda or through Miniconda. Anaconda automatically includes a fat passel of science/maths/data packages, and if you need those you probably already know about it. Miniconda does not automatically include all that stuff so that's what I use.

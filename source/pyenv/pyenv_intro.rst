@@ -30,3 +30,8 @@ you can see all available versions with ``pyenv install --list``.
     https://github.com/pyenv/pyenv/blob/master/README.md
 
     https://stackoverflow.com/questions/29950300/what-is-the-relationship-between-virtualenv-and-pyenv
+
+
+Why do I do it this way? Because it's working, and I'm not really sure what's going on with all these tools and how they work with each other. The more I try to figure out python dev environments the more I think that no one else does either.
+
+
