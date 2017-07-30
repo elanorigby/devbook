@@ -1,4 +1,4 @@
-Use pip so Python doesn’t squeeze you to death
+A longer introduction to using pip
 ================================================
 pip is the offical package manager of PyPi - the Python Package Index. 
 

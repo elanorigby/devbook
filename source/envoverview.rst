@@ -2,8 +2,8 @@ A basic Python development environment on Mac
 =============================================
 
 
-Install Xcode and command line tools because you’ll have to at some point anyway
---------------------------------------------------------------------------------
+Install Xcode and command line tools because you’ll have to at some point anyway 🤷🏻‍♀️
+----------------------------------------------------------------------------------------
 
 In your terminal, check if command line tools installed / install them
 ::
@@ -13,6 +13,7 @@ open the appstore and search for xcode. install it.
 
 install extra components / agree to stuff
 
+|
 
 Install Homebrew so you don’t hate your life 🍺
 --------------------------------------------------
@@ -33,8 +34,9 @@ if permissions need fixing
 ..
     reference - https://github.com/Homebrew/brew/blob/master/docs/FAQ.md
 
+|
 
-Use pyenv to keep your sneks in a row 🐍🐍🐍
+Use Pyenv to keep your sneks in a row 🐍🐍🐍
 ---------------------------------------------------
 ::
 
@@ -63,8 +65,9 @@ you can see all available versions with ``pyenv install --list``.
 
     reference - https://github.com/pyenv/pyenv/blob/master/README.md
 
+|
 
-Make sure you have pip so Python doesn’t squeeze you to death 💀
+Make sure you have Pip so Python doesn’t squeeze you to death 💀
 -------------------------------------------------------------------
 Pip is the offical package manager of PyPi - the Python Package Index. If you want to use a library/package that is not in the standard library (which you will) you need this.
 
@@ -85,8 +88,12 @@ upgrade it
 
     reference - https://pip.pypa.io/en/stable/user_guide/#only-if-needed-recursive-upgrade
 
+The other stuff I've written about pip is :doc:`here <pip/pip_over>`.
 
-Use virtualenv because you don't 💩 where you eat
+
+|
+
+Use Virtualenv because you don't 💩 where you eat
 --------------------------------------------------------
 This is a tool to make ✨isolated environments✨ so you can keep your projects' dependencies separate and tidy and they don't junk up your system and create version conflicts and general badness and eventual sorrow.
 ::
@@ -96,8 +103,9 @@ This is a tool to make ✨isolated environments✨ so you can keep your projects
 
     reference - http://docs.python-guide.org/en/latest/dev/virtualenvs/ 
 
+|
 
-Cleanse your soul in the waters of pipenv 🐋
+Cleanse your soul in the waters of Pipenv 🐋
 ----------------------------------------------
 Pipenv is how you're going to interact with virtualenv and pip 99.999% of the time probably. It gives you easy ways to create and manage your virtualenvs and keeps track of the packages you install in them using the shiny new delicousness that is Pipfile.
     
@@ -148,13 +156,11 @@ If you were previously using virtualenvwrapper, here are :doc:`pipenv/pipenv_v_w
     Pipenv docs - http://docs.pipenv.org/en/latest/
 
 
-
+|
 
 Use Git so that you don’t lose your mind 🗡 get murdered by your co-workers 
 ----------------------------------------------------------------------------
 There are a lot of very nice resources for learning git. Here's one to get you started: https://www.atlassian.com/git
 
-
-
-
+The other stuff I've written about git is :doc:`here <git/git_over>`.
 

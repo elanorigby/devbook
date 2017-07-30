@@ -1,5 +1,5 @@
-Git Tips
-==========
+General Git Tips 👩🏻‍🏭
+========================
 
 Unstage file changes
 ---------------------

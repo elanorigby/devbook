@@ -1,4 +1,4 @@
-Fast-ass ReST Reference
+rst reST reStructuredText
 =============================
 of things I need to use and keep forgetting
 
@@ -16,5 +16,12 @@ Inline code aka literal interpretation
 ::
 
 	``$ alias snek="python"``
+
+add blank line
+---------------
+::
+	``|``
+
+
 
 

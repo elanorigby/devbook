@@ -31,24 +31,24 @@ link to a doc
 :: 
 	``:doc:`folder/file```
 
+link to arbitray reference point
+---------------------------------
+
+
 
 adding a logo
 --------------
-add
+Max width: 200px
+Put the logo file in the _static directory and add
 ::
 	``html_logo = 'path-to-image'``
+
 to conf.py
+
 (alabaster says you can add 'logo' to the html_theme_options dictionary, but that didn't work for me for some reason)	
 
-html_logo
-
-    If given, this must be the name of an image file (path relative to the configuration directory) that is the logo of the docs. It is placed at the top of the sidebar; its width should therefore not exceed 200 pixels. Default: None.
-
-    New in version 0.4.1: The image file will be copied to the _static directory of the output HTML, but only if the file does not already exist there.
 
 http://www.sphinx-doc.org/en/stable/config.html
-
-
 
 http://www.sphinx-doc.org/en/stable/markup/inline.html#
 

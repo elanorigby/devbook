@@ -45,7 +45,7 @@ templates_path = ['_templates']
 source_suffix = '.rst'
 
 # The master toctree document.
-master_doc = 'index'
+master_doc = 'README'
 
 # General information about the project.
 project = "sharlak's devbook"
@@ -97,6 +97,11 @@ html_theme_options = {
 }
 
 html_logo = 'devbooklogo.png'
+
+html_sidebars = {
+   '**': ['globaltoc.html', 'searchbox.html'],
+   'using/windows': ['windowssidebar.html', 'searchbox.html'],
+}
 
 
 # Add any paths that contain custom static files (such as style sheets) here,

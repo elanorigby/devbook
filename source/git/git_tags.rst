@@ -1,5 +1,7 @@
-Versions and how to tag them
+How to add tags in Git
 =============================
+Tags in git almost always used for marking versions, but you don't strictly have to.
+
 
 Annotated Tags
 ---------------
