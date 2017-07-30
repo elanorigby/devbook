@@ -14,7 +14,7 @@ If you see anything that's glaringly wrong, send me a pull request! That would b
 |
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
    
    envoverview
    git/git_over
