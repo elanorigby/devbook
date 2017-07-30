@@ -1,4 +1,5 @@
-.. _git_ref:
+|
+
 ===
 Git
 ===
@@ -8,7 +9,8 @@ General Git Tips 🛶
 
 Unstage file changes
 ---------------------
-::
+like this::
+
 	$ git reset HEAD <filePath>
 
 
@@ -19,14 +21,16 @@ https://help.github.com/articles/resolving-a-merge-conflict-using-the-command-li
 
 Add all currently untracked files to .gitignore
 ------------------------------------------------
-::
+like this::
+
 	$ git status -s | grep -e "^\?\?" | cut -c 4- >> .gitignore
 ..
 	https://stackoverflow.com/questions/15862598/how-to-add-all-currently-untracked-files-folders-to-git-ignore
 
 Add file/dir to .gitignore without opening it
 ----------------------------------------------
-::
+like this::
+
 	$ echo 'file-name' >> .gitignore
 ..
 	http://www.tilcode.com/how-to-quickly-add-lines-to-gitignore-using-the-command-line/
@@ -51,8 +55,7 @@ Tags in git almost always used for marking versions, but you don't strictly have
 Kinds of Tags
 ---------------
 
-Annotated Tags
-+++++++++++++++
+- Annotated Tags
 
 Annotated tags are stored as full objects in the Git database. They’re checksummed; contain the tagger name, email, and date; have a tagging message; and can be signed and verified with GNU Privacy Guard (GPG). It’s generally recommended that you create annotated tags so you can have all this information; but if you want a temporary tag or for some reason don’t want to keep the other information, lightweight tags are available too.
 
@@ -67,8 +70,7 @@ To view annotated tag deets
 	$ git show v1.4
 
 
-Lightweight Tags
-+++++++++++++++++
+- Lightweight Tags
 
 Another way to tag commits is with a lightweight tag. This is basically the commit checksum stored in a file – no other information is kept. To create a lightweight tag, don’t supply the -a, -s, or -m option::
 
@@ -77,7 +79,8 @@ Another way to tag commits is with a lightweight tag. This is basically the comm
 
 How to List Tags
 -----------------
-::
+like this::
+
 	$ git tag
 
 
