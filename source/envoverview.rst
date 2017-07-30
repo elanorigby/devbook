@@ -1,4 +1,4 @@
-A basic Python development environment on Mac 
+A Python development environment on Mac 
 =============================================
 
 
