@@ -18,7 +18,9 @@ check to see if you already have it (you almost certainly do):
 if not installed, follow directions in docs -
 https://pip.pypa.io/en/stable/installing/#installing-with-get-pip-py
 
-upgrade it
+Upgrade
+--------
+by running
 ::
 
     $ pip install --upgrade pip
@@ -28,25 +30,33 @@ upgrading
 
 NOTE: if you are using pipenv you won't usually need any of the below
 
-to see a list of the packages you have installed
+List installed packages
+------------------------
+by running
 ::
     $ pip list
 
 **OR** be a cool guy and use :ref:`pipdeptree <pipdeptree-ref>`
 
-to install a package
+Install a package
+------------------
+Like so
 ::
     $ pip install <package_name>
 
-to install a specific version of a package
+Install a specific version of a package
+........................................
+Thusly
 ::
     $ pip install Flask==0.10.1
 
-to update a package
+Update a package
+-----------------
 ::
     $ pip install --upgrade <package_name>
 
-to uninstall a package
+Uninstall a package
+--------------------
 :: 
     $ pip uninstall <package_name>
 
@@ -84,4 +94,4 @@ to use::
 	
 	$ pipdeptree
 
-OR do yourself a favor and :doc:`alias <../bash/bash_aliasing>` it.
+OR do yourself a favor and :doc:`alias <bash/bash_aliasing>` it.
