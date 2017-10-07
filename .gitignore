@@ -1,2 +1,3 @@
 source/conda/pdfs/
 build/
+*.swp
