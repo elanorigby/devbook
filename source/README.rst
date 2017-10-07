@@ -19,6 +19,7 @@ If you see anything that's glaringly wrong, send me a pull request! That would b
    envoverview
    git/git_over
    pip/pip_over
+   vim/intro_vim
 
 |
 |
